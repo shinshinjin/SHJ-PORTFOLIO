@@ -21,3 +21,8 @@
 .video-link img{object-fit:cover}
 @media(max-width:760px){.tih-cover{min-height:450px}.tih-cover img{height:430px}.media-pair{gap:10px}.media-phones{padding:14px}.media-frame figcaption{font-size:11px}}
 @media(max-width:520px){.media-pair:not(.media-phones){grid-template-columns:1fr;gap:24px}.media-code{grid-template-columns:1fr}.media-phones .media-frame{max-width:100%}.tih-cover{min-height:410px}.tih-cover img{height:390px}}
+
+.feature-frame img{filter:none;opacity:1;object-position:center 42%}
+.media-phone-single{max-width:320px;margin-left:auto;margin-right:auto}
+.tih-cover img{height:auto;max-height:680px;max-width:100%;width:auto}
+@media(max-width:760px){.tih-cover{min-height:300px}.tih-cover img{width:100%;max-width:100%;height:auto}}
