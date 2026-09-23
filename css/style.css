@@ -26,3 +26,9 @@
 .media-phone-single{max-width:320px;margin-left:auto;margin-right:auto}
 .tih-cover img{height:auto;max-height:680px;max-width:100%;width:auto}
 @media(max-width:760px){.tih-cover{min-height:300px}.tih-cover img{width:100%;max-width:100%;height:auto}}
+
+.media-frame img{width:auto;max-width:100%}
+.media-natural img{width:auto;max-width:100%}
+.media-code{grid-template-columns:minmax(0,1fr);gap:18px}
+.media-code img{width:auto;max-width:100%}
+.media-zoom{display:block;width:fit-content;max-width:100%;cursor:zoom-in}
