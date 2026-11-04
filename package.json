@@ -1,0 +1,24 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "HTML/CSS/JavaScript 포트폴리오. 빌드 과정 없이 Cloudflare Workers(정적 에셋)로 서비스합니다.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shinshinjin/SHJ-PORTFOLIO.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/shinshinjin/SHJ-PORTFOLIO/issues"
+  },
+  "homepage": "https://github.com/shinshinjin/SHJ-PORTFOLIO#readme",
+  "devDependencies": {
+    "wrangler": "^4.157.0"
+  }
+}
