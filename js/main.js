@@ -1,22 +1,57 @@
 document.documentElement.classList.add('js');
-document.querySelectorAll('img[data-remote-image]').forEach(img=>{
-  const hide=()=>{img.hidden=true};
-  img.addEventListener('error',hide,{once:true});
-  if(img.complete&&img.naturalWidth===0)hide();
-});
+const reduceMotion=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// 모바일 메뉴
 const toggle=document.querySelector('.menu-toggle');
 const nav=document.querySelector('.nav');
 if(toggle&&nav){
+  const close=()=>{nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','메뉴 열기')};
   toggle.addEventListener('click',()=>{
     const open=nav.classList.toggle('open');
     toggle.setAttribute('aria-expanded',String(open));
     toggle.setAttribute('aria-label',open?'메뉴 닫기':'메뉴 열기');
   });
-  nav.addEventListener('click',e=>{if(e.target.closest('a')){nav.classList.remove('open');toggle.setAttribute('aria-expanded','false')}});
-  document.addEventListener('keydown',e=>{if(e.key==='Escape'){nav.classList.remove('open');toggle.setAttribute('aria-expanded','false')}});
+  nav.addEventListener('click',e=>{if(e.target.closest('a'))close()});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});
 }
-const targets=document.querySelectorAll('.reveal');
-if('IntersectionObserver'in window&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
-  const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('in-view');observer.unobserve(entry.target)}}),{threshold:.08,rootMargin:'0px 0px -35px 0px'});
-  targets.forEach(el=>observer.observe(el));
-}else targets.forEach(el=>el.classList.add('in-view'));
+
+// 첫 화면 길찾기 그림: 동작 줄이기 설정이면 완성된 상태로 바로 보여줌
+const pathfind=document.querySelector('.pathfind');
+if(pathfind&&reduceMotion&&pathfind.setCurrentTime){pathfind.setCurrentTime(10);pathfind.pauseAnimations()}
+
+// PDF 저장: 인쇄 창을 열고, 파일 이름이 되는 문서 제목을 잠시 바꿈
+const printPage=title=>{
+  const original=document.title;
+  if(title)document.title=title;
+  window.addEventListener('afterprint',()=>{document.title=original},{once:true});
+  window.print();
+};
+document.querySelectorAll('[data-print]').forEach(btn=>btn.addEventListener('click',()=>printPage(btn.dataset.printTitle)));
+
+// 포트폴리오 PDF 페이지: 프로젝트 상세 페이지를 불러와 한 문서로 합침
+const pdfRoot=document.getElementById('pdf-projects');
+if(pdfRoot){
+  const btn=document.querySelector('.pdf-toolbar [data-print]');
+  const status=document.querySelector('.pdf-status');
+  const sources=pdfRoot.dataset.sources.split(',');
+  Promise.all(sources.map(url=>fetch(url).then(r=>{if(!r.ok)throw new Error(url);return r.text()})))
+    .then(pages=>{
+      pages.forEach(html=>{
+        const main=new DOMParser().parseFromString(html,'text/html').querySelector('main');
+        main.querySelectorAll('.back').forEach(el=>el.remove());
+        main.querySelectorAll('img').forEach(img=>img.loading='eager');
+        const article=document.createElement('article');
+        article.className='pdf-project';
+        article.append(...main.childNodes);
+        pdfRoot.append(article);
+      });
+      return Promise.all([...pdfRoot.querySelectorAll('img')].map(img=>img.decode().catch(()=>{})));
+    })
+    .then(()=>{
+      status.remove();
+      btn.disabled=false;
+      btn.textContent='PDF로 저장';
+      if(new URLSearchParams(location.search).has('print'))printPage(btn.dataset.printTitle);
+    })
+    .catch(()=>{status.textContent='프로젝트를 불러오지 못했습니다. 페이지를 새로고침해 주세요.';btn.textContent='불러오기 실패'});
+}
