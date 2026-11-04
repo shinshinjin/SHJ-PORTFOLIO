@@ -28,6 +28,7 @@
   하나를 고치면 index, 404, resume, projects/* 전부 동일하게 고친다.
 - HTML/CSS는 한 줄로 압축된 형식이다. 수정할 때 파일 전체를 다시 포맷하지 말고 필요한 부분만 바꾼다.
 - 새 페이지는 기존 `projects/` 파일을 복제해서 만들고, `<title>`, `meta description`, `og:title`, `og:description`, `og:url`, `canonical`을 그 페이지에 맞게 모두 바꾼다.
+- 페이지에는 webp를 쓴다. PNG/JPG 원본은 그대로 두고 같은 이름의 `.webp` 사본을 만들어 연결한다(스크린샷 품질 80, 코드 캡처 90). `sitemap.xml`에 새 페이지를 추가한다.
 - `<img>`에는 한국어 `alt`, `width`/`height`, `decoding="async"`를 넣고, 첫 화면 밖 이미지는 `loading="lazy"`.
 - 접근성 요소(`.skip` 링크, `aria-label`, `aria-expanded`, `:focus-visible`)는 지우지 않는다.
 - 색상·폭은 `:root` CSS 변수(`--ink`, `--blue`, `--paper` 등)를 쓴다. 새 색상 하드코딩 금지.
