@@ -60,3 +60,9 @@ if(pdfRoot){
     })
     .catch(()=>{status.textContent='프로젝트를 불러오지 못했습니다. 페이지를 새로고침해 주세요.';btn.textContent='불러오기 실패'});
 }
+
+// 이력서 페이지를 ?print=1로 열면(메인의 '이력서 PDF 저장') 폰트가 준비된 뒤 바로 인쇄 창을 엶
+if(!pdfRoot&&new URLSearchParams(location.search).has('print')){
+  const btn=document.querySelector('[data-print]');
+  if(btn)window.addEventListener('load',()=>document.fonts.ready.then(()=>printPage(btn.dataset.printTitle)),{once:true});
+}
