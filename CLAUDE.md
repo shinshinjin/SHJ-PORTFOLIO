@@ -22,7 +22,7 @@
 ## 반드시 지킬 규칙
 - 내부 링크·리소스 경로는 항상 `/SHJ-PORTFOLIO/...` 절대경로로 쓴다.
   이유: GitHub Pages 하위 경로에서 서비스됨. 상대경로나 `/assets/...`는 배포 후 깨짐.
-- `css/*.css`를 수정하면 모든 HTML(7개)의 `?v=` 숫자를 1 올린다. (현재 style.css?v=6, responsive.css?v=3)
+- `css/*.css`를 수정하면 모든 HTML(7개)의 `?v=` 숫자를 1 올린다. (현재 style.css?v=7, responsive.css?v=3)
   이유: 브라우저 캐시 때문에 변경이 반영되지 않음.
 - 헤더(`.site-header`)·네비·푸터(`.footer`)는 모든 페이지에 복사되어 있다.
   하나를 고치면 index, 404, resume, projects/* 전부 동일하게 고친다.

@@ -12,7 +12,12 @@ if(toggle&&nav){
     toggle.setAttribute('aria-label',open?'메뉴 닫기':'메뉴 열기');
   });
   nav.addEventListener('click',e=>{if(e.target.closest('a'))close()});
-  document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});
+  document.addEventListener('keydown',e=>{
+    if(e.key!=='Escape'||!nav.classList.contains('open'))return;
+    const inside=nav.contains(document.activeElement);
+    close();
+    if(inside)toggle.focus(); // 닫힌 메뉴 안에 포커스가 남지 않도록 버튼으로 되돌림
+  });
 }
 
 // 첫 화면 길찾기 그림: 동작 줄이기 설정이면 완성된 상태로 바로 보여줌

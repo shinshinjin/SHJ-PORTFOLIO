@@ -181,7 +181,7 @@ code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.86em;
 .footer-bottom a{color:var(--line);text-decoration:none}
 .footer-bottom a:hover{color:var(--sheet)}
 
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-delay:0s!important;transition-duration:.01ms!important}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-delay:0s!important;transition-duration:0s!important}}
 
 /* print / pdf */
 @page{size:A4;margin:14mm 14mm 16mm}
