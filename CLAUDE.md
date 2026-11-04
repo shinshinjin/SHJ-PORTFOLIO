@@ -11,7 +11,7 @@
 - `404.html`: GitHub Pages 404 페이지
 - `portfolio-pdf.html`: 프로젝트 상세 페이지 3개를 불러와 한 문서로 합친 뒤 인쇄(PDF 저장). 프로젝트를 추가하면 `data-sources`와 목차도 고친다.
 - 인쇄/PDF 스타일은 `css/style.css` 끝의 `@media print`에 있다. 폰트는 Wanted Sans(jsDelivr CDN).
-- 디자인 원칙: 대문자 라벨·번호 장식·섹션마다 등장 애니메이션을 쓰지 않는다. 움직임은 첫 화면 길찾기 SVG 하나만.
+- 디자인 원칙: 토스식 정돈(연회색 바탕 #f2f4f6 + 흰 판, 파랑 하나) + 게임 에디터 구조(첫 화면 NavMesh 뷰포트, 프로젝트 상세의 인스펙터 패널 `.inspector`). 둥글기는 위계별 변수(`--r-sheet` 28, `--r-card` 20, `--r-btn` 14). 흰 글자 버튼 배경은 대비 때문에 `--blue-ink`, `--blue`는 그래픽·포커스용. 대문자 라벨·번호 장식·섹션 등장 애니메이션 금지, 자동 움직임은 첫 화면 길찾기 SVG 하나만. 모바일 첫 화면 버튼은 세로로 쌓는다(폰트 교체 시 줄바꿈으로 레이아웃이 밀리는 것 방지).
 - `css/style.css`(공통), `css/responsive.css`(반응형), `js/main.js`(메뉴 토글, PDF 저장 버튼, 포트폴리오 PDF 합치기)
 - `assets/images/`: 이미지 (`<프로젝트>-<내용>.webp|png|jpg` 명명)
 
@@ -22,7 +22,7 @@
 ## 반드시 지킬 규칙
 - 내부 링크·리소스 경로는 항상 `/SHJ-PORTFOLIO/...` 절대경로로 쓴다.
   이유: GitHub Pages 하위 경로에서 서비스됨. 상대경로나 `/assets/...`는 배포 후 깨짐.
-- `css/*.css`를 수정하면 모든 HTML(7개)의 `?v=` 숫자를 1 올린다. (현재 style.css?v=7, responsive.css?v=3)
+- `css/*.css`를 수정하면 모든 HTML(7개)의 `?v=` 숫자를 1 올린다. (현재 style.css?v=8, responsive.css?v=4)
   이유: 브라우저 캐시 때문에 변경이 반영되지 않음.
 - 헤더(`.site-header`)·네비·푸터(`.footer`)는 모든 페이지에 복사되어 있다.
   하나를 고치면 index, 404, resume, projects/* 전부 동일하게 고친다.
