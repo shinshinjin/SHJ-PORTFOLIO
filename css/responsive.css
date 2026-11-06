@@ -1,45 +1,40 @@
 @media (max-width:960px){
 .hero{grid-template-columns:1fr;align-items:start}
-.about-grid,.case-grid,.resume-intro,.work-feature{grid-template-columns:1fr}
-.work-feature{padding:14px 14px 28px}
-.work-feature .work-text{padding-inline:12px}
+.about-grid,.case-grid,.resume-intro{grid-template-columns:1fr}
 .case-grid h2{position:static}
 .page-hero{grid-template-columns:1fr}
-.inspector{grid-column:1;grid-row:auto;margin-top:28px;display:grid;grid-template-columns:1fr 1fr;column-gap:24px}
-.inspector div:nth-child(2){border-top:0}
+.inspector{grid-column:1;grid-row:auto;margin-top:32px;display:grid;grid-template-columns:1fr 1fr;column-gap:24px}
 .resume-row{grid-template-columns:1fr;gap:20px}
+.work-row{grid-template-columns:96px minmax(0,1fr) minmax(160px,220px);gap:6px 24px}
 }
+/* 터치 기기: 다른 줄을 흐리게 하지 않음 */
+@media (hover:none){.work-list:has(.work-row:hover) .work-row:not(:hover){opacity:1}}
 @media (max-width:720px){
 body{font-size:16px}
 .menu-toggle{display:inline-flex;flex-direction:column;justify-content:center;gap:6px;width:44px;height:44px;margin-right:-10px;padding:10px;background:none;border:0;border-radius:10px;cursor:pointer}
-.menu-toggle span{display:block;height:2px;border-radius:2px;background:var(--ink);transition:transform .2s}
-.menu-toggle[aria-expanded="true"] span:first-child{transform:translateY(4px) rotate(45deg)}
-.menu-toggle[aria-expanded="true"] span:last-child{transform:translateY(-4px) rotate(-45deg)}
-.nav{position:absolute;top:64px;left:0;right:0;display:none;flex-direction:column;gap:2px;padding:8px calc(var(--gutter) - 14px) 16px;background:var(--sheet);border-bottom:1px solid var(--line)}
-.nav.open{display:flex}
-.nav a{padding:12px 14px;font-size:17px;color:var(--ink)}
-.hero{padding-top:24px;gap:28px}
-.hero-role{margin:16px 0 28px}
-.hero-actions{display:grid}
-.viewport{padding:8px;border-radius:var(--r-card)}
-.pathfind{border-radius:14px}
-.map-legend{gap:4px 14px;padding:12px 6px 4px;font-size:12px}
-.work-pair{grid-template-columns:1fr;gap:12px}
-.work-feature,.work{border-radius:var(--r-card);padding:10px 10px 24px}
-.work-feature .work-text,.work .work-meta,.work h3,.work p{padding-inline:8px}
-.work-image{border-radius:14px}
-.about-grid>div,.case-section,.resume-row{padding:24px 20px;border-radius:var(--r-card)}
-.case-section{margin-inline:12px;width:auto}
-.project-cover{width:auto;margin-inline:12px;padding:8px;border-radius:var(--r-card)}
-.project-cover img{border-radius:14px}
-.inspector{grid-template-columns:1fr;padding:6px 18px}
-.inspector div:nth-child(2){border-top:1px solid var(--line)}
+.menu-toggle span{display:block;height:1.5px;border-radius:2px;background:var(--ink);transition:transform .2s var(--ease-out)}
+.menu-toggle[aria-expanded="true"] span:first-child{transform:translateY(3.75px) rotate(45deg)}
+.menu-toggle[aria-expanded="true"] span:last-child{transform:translateY(-3.75px) rotate(-45deg)}
+.nav{position:absolute;top:64px;left:0;right:0;display:none;flex-direction:column;gap:0;padding:4px var(--gutter) 16px;background:var(--paper);border-bottom:1px solid var(--line)}
+.nav.open{display:flex;animation:fade .18s ease both}
+.nav a{padding:14px 0;font-size:17px;color:var(--ink);border-radius:0;border-bottom:1px solid var(--line)}
+.nav a:last-child{border-bottom:0}
+.nav a[aria-current="page"]::after{display:none}
+.hero{padding-top:40px;gap:40px}
+.hero-role{margin-top:20px}
+.hero-actions .btn{width:100%}
+.section-head{grid-template-columns:1fr}
+.section-head p{justify-self:start;text-align:left}
+.work-row{grid-template-columns:1fr;grid-template-areas:"thumb" "year" "main" "tags";gap:4px;padding:24px 0 26px}
+.work-thumb{aspect-ratio:16/9;margin-bottom:12px}
+.work-year{padding-top:0}
+.map-legend{gap:4px 14px;padding:10px 12px;font-size:12px}
+.project-cover{width:auto;margin-inline:var(--gutter);border-radius:12px}
+.inspector{grid-template-columns:1fr}
 .career-list li,.resume-entry,.skills div{grid-template-columns:1fr;gap:4px}
 .media-pair{grid-template-columns:1fr}
 .media-phones{grid-template-columns:1fr 1fr}
-.flow{padding:10px}
-.flow span{font-size:13px;padding:5px 12px}
-.numbered article{padding:16px 18px}
+.flow span{font-size:13px;padding:4px 10px}
 .footer-bottom{flex-direction:column}
-.pdf-toolbar{padding:16px}
+.footer-links a{flex:1 1 auto;justify-content:center}
 }

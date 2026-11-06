@@ -20,6 +20,21 @@ if(toggle&&nav){
   });
 }
 
+// 헤더: 맨 위에서 벗어나면 아래 선을 보여 줌
+const header=document.querySelector('.site-header');
+if(header){
+  const mark=()=>header.classList.toggle('scrolled',scrollY>8);
+  mark();addEventListener('scroll',mark,{passive:true});
+}
+
+// 프로젝트 목록: 누른 줄의 대표 화면에 전환 이름(cover)을 붙여 상세 페이지 첫 이미지로 이어지게 함
+const list=document.querySelector('.work-list');
+if(list){
+  const clear=()=>list.querySelectorAll('.work-thumb').forEach(t=>t.style.viewTransitionName='');
+  list.addEventListener('click',e=>{const row=e.target.closest('.work-row');if(!row)return;clear();row.querySelector('.work-thumb').style.viewTransitionName='cover'});
+  addEventListener('pageshow',clear); // 뒤로 오면(bfcache) 지움
+}
+
 // 첫 화면 길찾기 그림: 동작 줄이기 설정이면 완성된 상태로 바로 보여줌
 const pathfind=document.querySelector('.pathfind');
 if(pathfind&&reduceMotion&&pathfind.setCurrentTime){pathfind.setCurrentTime(10);pathfind.pauseAnimations()}
@@ -59,4 +74,10 @@ if(pdfRoot){
       if(new URLSearchParams(location.search).has('print'))printPage(btn.dataset.printTitle);
     })
     .catch(()=>{status.textContent='프로젝트를 불러오지 못했습니다. 페이지를 새로고침해 주세요.';btn.textContent='불러오기 실패'});
+}
+
+// 이력서 페이지를 ?print=1로 열면(메인의 '이력서 PDF 저장') 폰트가 준비된 뒤 바로 인쇄 창을 엶
+if(!pdfRoot&&new URLSearchParams(location.search).has('print')){
+  const btn=document.querySelector('[data-print]');
+  if(btn)window.addEventListener('load',()=>document.fonts.ready.then(()=>printPage(btn.dataset.printTitle)),{once:true});
 }
