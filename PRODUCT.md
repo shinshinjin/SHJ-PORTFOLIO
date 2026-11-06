@@ -21,11 +21,11 @@ web
 ## Operating Context
 - 지원서·이력서에 링크로 첨부. 방문자는 첫 화면과 프로젝트 목록에서 몇십 초 안에 판단한다.
 - 사이트에서 이력서 PDF, 프로젝트 3개를 합친 포트폴리오 PDF를 저장할 수 있다(`portfolio-pdf.html`, 인쇄 스타일).
-- GitHub Pages(`/SHJ-PORTFOLIO/` 하위 경로)로 배포.
+- Cloudflare Workers 정적 에셋으로 배포 (https://portfolio.shjj.workers.dev/).
 
 ## Capabilities and Constraints
 - 순수 HTML/CSS/JS. 빌드 도구·프레임워크·npm·외부 JS 라이브러리 없음(2026-11-06 다시 확인: 모션도 CSS + 순수 JS로).
-- 내부 경로는 `/SHJ-PORTFOLIO/...` 절대경로, CSS를 바꾸면 모든 HTML의 `?v=`를 올림, 헤더·푸터는 모든 페이지에 복사돼 있음(저장소 CLAUDE.md).
+- 내부 경로는 `/`로 시작하는 루트 절대경로, CSS를 바꾸면 모든 HTML의 `?v=`를 올림, 헤더·푸터는 모든 페이지에 복사돼 있음(저장소 CLAUDE.md).
 - 이미지는 webp(원본 PNG/JPG 유지), 한국어 alt·크기·lazy.
 - 인쇄/PDF 저장이 깨지면 안 됨.
 - 폰트: Wanted Sans(jsDelivr CDN).
