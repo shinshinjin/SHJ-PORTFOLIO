@@ -8,3 +8,5 @@ package-lock.json
 wrangler.jsonc
 README.md
 CLAUDE.md
+DESIGN.md
+PRODUCT.md
