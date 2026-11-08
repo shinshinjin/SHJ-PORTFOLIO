@@ -1,5 +1,4 @@
 document.documentElement.classList.add('js');
-const reduceMotion=matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 // 모바일 메뉴
 const toggle=document.querySelector('.menu-toggle');
@@ -34,10 +33,6 @@ if(list){
   list.addEventListener('click',e=>{const row=e.target.closest('.work-row');if(!row)return;clear();row.querySelector('.work-thumb').style.viewTransitionName='cover'});
   addEventListener('pageshow',clear); // 뒤로 오면(bfcache) 지움
 }
-
-// 첫 화면 길찾기 그림: 동작 줄이기 설정이면 완성된 상태로 바로 보여줌
-const pathfind=document.querySelector('.pathfind');
-if(pathfind&&reduceMotion&&pathfind.setCurrentTime){pathfind.setCurrentTime(10);pathfind.pauseAnimations()}
 
 // PDF 저장: 인쇄 창을 열고, 파일 이름이 되는 문서 제목을 잠시 바꿈
 const printPage=title=>{

@@ -1,17 +1,16 @@
 @media (max-width:960px){
 .hero{grid-template-columns:1fr;align-items:start}
-.about-grid,.case-grid,.resume-intro{grid-template-columns:1fr}
+.hero-facts{max-width:34em}
+.about-grid,.case-grid,.resume-intro{grid-template-columns:minmax(0,1fr)}
 .case-grid h2{position:static}
 .page-hero{grid-template-columns:1fr}
 .inspector{grid-column:1;grid-row:auto;margin-top:32px;display:grid;grid-template-columns:1fr 1fr;column-gap:24px}
 .resume-row{grid-template-columns:1fr;gap:20px}
 .work-row{grid-template-columns:96px minmax(0,1fr) minmax(160px,220px);gap:6px 24px}
 }
-/* 터치 기기: 다른 줄을 흐리게 하지 않음 */
-@media (hover:none){.work-list:has(.work-row:hover) .work-row:not(:hover){opacity:1}}
 @media (max-width:720px){
 body{font-size:16px}
-.menu-toggle{display:inline-flex;flex-direction:column;justify-content:center;gap:6px;width:44px;height:44px;margin-right:-10px;padding:10px;background:none;border:0;border-radius:10px;cursor:pointer}
+.menu-toggle{display:inline-flex;flex-direction:column;justify-content:center;gap:6px;width:44px;height:44px;margin-right:-10px;padding:10px;background:none;border:0;border-radius:var(--r-sm);cursor:pointer}
 .menu-toggle span{display:block;height:1.5px;border-radius:2px;background:var(--ink);transition:transform .2s var(--ease-out)}
 .menu-toggle[aria-expanded="true"] span:first-child{transform:translateY(3.75px) rotate(45deg)}
 .menu-toggle[aria-expanded="true"] span:last-child{transform:translateY(-3.75px) rotate(-45deg)}
@@ -20,7 +19,7 @@ body{font-size:16px}
 .nav a{padding:14px 0;font-size:17px;color:var(--ink);border-radius:0;border-bottom:1px solid var(--line)}
 .nav a:last-child{border-bottom:0}
 .nav a[aria-current="page"]::after{display:none}
-.hero{padding-top:40px;gap:40px}
+.hero{padding-top:40px;gap:36px}
 .hero-role{margin-top:20px}
 .hero-actions .btn{width:100%}
 .section-head{grid-template-columns:1fr}
@@ -28,8 +27,7 @@ body{font-size:16px}
 .work-row{grid-template-columns:1fr;grid-template-areas:"thumb" "year" "main" "tags";gap:4px;padding:24px 0 26px}
 .work-thumb{aspect-ratio:16/9;margin-bottom:12px}
 .work-year{padding-top:0}
-.map-legend{gap:4px 14px;padding:10px 12px;font-size:12px}
-.project-cover{width:auto;margin-inline:var(--gutter);border-radius:12px}
+.project-cover{width:auto;margin-inline:var(--gutter);border-radius:var(--r)}
 .inspector{grid-template-columns:1fr}
 .career-list li,.resume-entry,.skills div{grid-template-columns:1fr;gap:4px}
 .media-pair{grid-template-columns:1fr}
@@ -37,4 +35,4 @@ body{font-size:16px}
 .flow span{font-size:13px;padding:4px 10px}
 .footer-bottom{flex-direction:column}
 .footer-links a{flex:1 1 auto;justify-content:center}
-}
+}@media (max-width:720px){.log li{grid-template-columns:1fr}.log time{grid-row:auto}.facts-row{grid-template-columns:1fr 1fr}.facts-row div:nth-child(3){padding-left:0;border-left:0}.recent{grid-template-columns:1fr}.code pre{font-size:12.5px}.data{display:block;overflow-x:auto;font-size:14px}.data td.n{white-space:normal}.diagram{overflow-x:auto}.diagram svg{min-width:600px}}
