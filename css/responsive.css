@@ -1,6 +1,6 @@
 @media (max-width:960px){
 .hero{grid-template-columns:1fr;align-items:start}
-.about-grid,.case-grid,.resume-intro{grid-template-columns:1fr}
+.about-grid,.case-grid,.resume-intro{grid-template-columns:minmax(0,1fr)}
 .case-grid h2{position:static}
 .page-hero{grid-template-columns:1fr}
 .inspector{grid-column:1;grid-row:auto;margin-top:32px;display:grid;grid-template-columns:1fr 1fr;column-gap:24px}
@@ -37,4 +37,4 @@ body{font-size:16px}
 .flow span{font-size:13px;padding:4px 10px}
 .footer-bottom{flex-direction:column}
 .footer-links a{flex:1 1 auto;justify-content:center}
-}
+}@media (max-width:720px){.log li{grid-template-columns:1fr}.log time{grid-row:auto}.facts-row{grid-template-columns:1fr 1fr}.facts-row div:nth-child(3){padding-left:0;border-left:0}.recent{grid-template-columns:1fr}.code pre{font-size:12.5px}.data{display:block;overflow-x:auto;font-size:14px}.data td.n{white-space:normal}.diagram{overflow-x:auto}.diagram svg{min-width:600px}}
