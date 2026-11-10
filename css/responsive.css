@@ -7,6 +7,7 @@
 .inspector{grid-column:1;grid-row:auto;margin-top:32px;display:grid;grid-template-columns:1fr 1fr;column-gap:24px}
 .resume-row{grid-template-columns:1fr;gap:20px}
 .work-row{grid-template-columns:96px minmax(0,1fr) minmax(160px,220px);gap:6px 24px}
+.recent{grid-template-columns:96px minmax(0,1fr);column-gap:24px}
 }
 @media (max-width:720px){
 body{font-size:16px}
@@ -35,4 +36,4 @@ body{font-size:16px}
 .flow span{font-size:13px;padding:4px 10px}
 .footer-bottom{flex-direction:column}
 .footer-links a{flex:1 1 auto;justify-content:center}
-}@media (max-width:720px){.log li{grid-template-columns:1fr}.log time{grid-row:auto}.facts-row{grid-template-columns:1fr 1fr}.facts-row div:nth-child(3){padding-left:0;border-left:0}.recent{grid-template-columns:1fr}.code pre{font-size:12.5px}.data{display:block;overflow-x:auto;font-size:14px}.data td.n{white-space:normal}.diagram{overflow-x:auto}.diagram svg{min-width:600px}}
+}@media (max-width:720px){.log li{grid-template-columns:1fr}.log time{grid-row:auto}.recent{grid-template-columns:1fr}.code pre{font-size:12.5px}.data{display:block;overflow-x:auto;font-size:14px}.data td.n{white-space:normal}.diagram{overflow-x:auto}.diagram svg{min-width:600px}}

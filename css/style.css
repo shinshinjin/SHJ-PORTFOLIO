@@ -68,7 +68,7 @@ figcaption{margin-top:12px;font-size:14px;line-height:1.6;color:var(--muted)}
 @keyframes rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 
 /* sections */
-.section{padding:clamp(56px,7vw,104px) 0}
+.section{padding:clamp(48px,6vw,84px) 0}
 .section h2{font-size:clamp(28px,3vw,38px);font-weight:650;letter-spacing:-.035em}
 .section-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px 48px;align-items:end;margin-bottom:clamp(20px,3vw,32px)}
 .section-head p{max-width:30em;justify-self:end}
@@ -109,10 +109,10 @@ figcaption{margin-top:12px;font-size:14px;line-height:1.6;color:var(--muted)}
 .inspector div{display:grid;grid-template-columns:84px minmax(0,1fr);gap:12px;padding:11px 0;border-bottom:1px solid var(--line)}
 .inspector dt{font-size:14px;color:var(--muted)}
 .inspector dd{margin:0;font-size:15px;font-weight:550;line-height:1.5}
-.project-cover{width:min(calc(100% - 2 * var(--gutter)),var(--max));margin:0 auto clamp(24px,4vw,56px);overflow:hidden;border-radius:var(--r);background:var(--sunk)}
+.project-cover{width:min(calc(100% - 2 * var(--gutter)),var(--max));margin:0 auto clamp(20px,3vw,40px);overflow:hidden;border-radius:var(--r);background:var(--sunk)}
 .project-cover img{width:100%;view-transition-name:cover}
-.case-section{padding:clamp(40px,5vw,72px) 0;border-top:1px solid var(--line)}
-main>.case-section:last-child{margin-bottom:clamp(40px,5vw,72px)}
+.case-section{padding:clamp(32px,4vw,56px) 0;border-top:1px solid var(--line)}
+main>.case-section:last-child{margin-bottom:clamp(24px,3vw,40px)}
 .case-grid{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(20px,4vw,64px);align-items:start}
 .case-grid h2{position:sticky;top:96px;font-size:clamp(22px,2.3vw,28px);font-weight:650;letter-spacing:-.03em}
 .body{min-width:0;max-width:740px}
@@ -149,18 +149,19 @@ code{font-family:var(--mono);font-size:.84em;padding:2px 6px;background:var(--su
   .video-link:hover img{opacity:.86;transform:scale(1.015)}
 }
 
-/* 진행 중 표시 · 업데이트 기록 · 구조도 · 측정 표 · 코드 (2026-11-08) */.status{display:inline-flex;align-items:center;gap:8px;font-weight:550}.status::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent)}.status-sub{color:var(--muted);font-weight:450}.work-tags .status{color:var(--accent-ink);font-weight:550}.work-tags .status::before{width:6px;height:6px}.log{list-style:none;margin:24px 0 0;padding:0;border-top:1px solid var(--ink)}.log li{display:grid;grid-template-columns:96px minmax(0,1fr);gap:4px 24px;padding:16px 0;border-bottom:1px solid var(--line)}.log time{grid-row:span 2;font-size:14px;color:var(--muted);padding-top:2px}.log b{font-size:16px;font-weight:600;line-height:1.5}.log p{margin:0;font-size:15px;line-height:1.65;color:var(--muted)}.log .tag{display:inline-block;margin-left:8px;font-size:13px;font-weight:500;color:var(--faint)}.log li:first-child time{color:var(--accent-ink);font-weight:600}.log-more{margin-top:14px;font-size:14px;color:var(--muted)}.diagram{margin:28px 0 0;padding:0;border:1px solid var(--line);border-radius:var(--r);background:var(--sunk);overflow:hidden}.diagram svg{display:block;width:100%;height:auto}.diagram figcaption{margin:0;padding:12px 16px;border-top:1px solid var(--line);background:var(--paper)}.dg-box{fill:var(--paper);stroke:var(--line-2);stroke-width:1.25}.dg-box.key{stroke:var(--ink)}.dg-check{fill:color-mix(in srgb,var(--accent) 7%,var(--paper));stroke:var(--accent);stroke-width:1.25;stroke-dasharray:4 3}.dg-t{font:600 14px var(--font);fill:var(--ink);letter-spacing:-.01em}.dg-s{font:450 12px var(--font);fill:var(--muted)}.dg-c{font:550 12px var(--font);fill:var(--accent-ink)}.dg-line{fill:none;stroke:var(--ink-2);stroke-width:1.25}.dg-line.soft{stroke:var(--line-2)}.dg-arrow{fill:var(--ink-2)}.data{width:100%;margin:24px 0 0;border-collapse:collapse;font-size:15px;font-variant-numeric:tabular-nums}.data caption{caption-side:bottom;text-align:left;margin-top:12px;font-size:14px;line-height:1.6;color:var(--muted)}.data th,.data td{padding:11px 12px 11px 0;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.data thead th{font-size:14px;font-weight:500;color:var(--muted);border-bottom:1px solid var(--ink)}.data td.n,.data th.n{text-align:right;padding-right:0;padding-left:12px;white-space:nowrap}.data td.d{color:var(--accent-ink);font-weight:600}.data+p,.code+p{margin-top:24px}.code{margin:24px 0 0;border:1px solid var(--line);border-radius:var(--r-sm);background:var(--sunk);overflow:hidden}.code figcaption{display:flex;justify-content:space-between;gap:12px;margin:0;padding:9px 14px;border-bottom:1px solid var(--line);background:var(--paper);font:500 13px var(--mono);color:var(--muted)}.code pre{margin:0;padding:16px 18px;overflow-x:auto;font:13.5px/1.7 var(--mono);color:var(--ink-2);tab-size:2}.code .c{color:var(--faint)}.code .k{color:var(--accent-ink)}.facts-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin:28px 0 0;border-top:1px solid var(--ink)}.facts-row div{padding:14px 16px 14px 0;border-bottom:1px solid var(--line)}.facts-row div+div{padding-left:16px;border-left:1px solid var(--line)}.facts-row strong{display:block;font-size:clamp(24px,2.6vw,32px);font-weight:650;letter-spacing:-.03em;line-height:1.2;font-variant-numeric:tabular-nums}.facts-row span{display:block;margin-top:4px;font-size:14px;color:var(--muted)}.recent{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(20px,4vw,64px);margin-top:clamp(40px,5vw,64px)}.recent h3{margin:0;font-size:20px;font-weight:650;letter-spacing:-.02em}.recent .log{margin-top:0}/* resume */
+/* 진행 중 표시 · 업데이트 기록 · 구조도 · 측정 표 · 코드 (2026-11-08, 장식 점·큰 숫자 칸은 2026-11-10 제거) */.status{font-weight:550;color:var(--accent-ink)}.status-sub{color:var(--muted);font-weight:450}.log{list-style:none;margin:24px 0 0;padding:0;border-top:1px solid var(--ink)}.log li{display:grid;grid-template-columns:96px minmax(0,1fr);gap:4px 24px;padding:16px 0;border-bottom:1px solid var(--line)}.log time{grid-row:span 2;font-size:14px;color:var(--muted);padding-top:2px}.log b{font-size:16px;font-weight:600;line-height:1.5}.log p{margin:0;font-size:15px;line-height:1.65;color:var(--muted)}.log .tag{display:inline-block;margin-left:8px;font-size:13px;font-weight:500;color:var(--muted)}.log li:first-child time{color:var(--accent-ink);font-weight:600}.log-more{margin-top:14px;font-size:14px;color:var(--muted)}.diagram{margin:28px 0 0;padding:0;border:1px solid var(--line);border-radius:var(--r);background:var(--sunk);overflow:hidden}.diagram svg{display:block;width:100%;height:auto}.diagram figcaption{margin:0;padding:12px 16px;border-top:1px solid var(--line);background:var(--paper)}.dg-box{fill:var(--paper);stroke:var(--line-2);stroke-width:1.25}.dg-box.key{stroke:var(--ink)}.dg-check{fill:color-mix(in srgb,var(--accent) 7%,var(--paper));stroke:var(--accent);stroke-width:1.25;stroke-dasharray:4 3}.dg-t{font:600 14px var(--font);fill:var(--ink);letter-spacing:-.01em}.dg-s{font:450 12px var(--font);fill:var(--muted)}.dg-c{font:550 12px var(--font);fill:var(--accent-ink)}.dg-line{fill:none;stroke:var(--ink-2);stroke-width:1.25}.dg-line.soft{stroke:var(--line-2)}.dg-arrow{fill:var(--ink-2)}.data{width:100%;margin:24px 0 0;border-collapse:collapse;font-size:15px;font-variant-numeric:tabular-nums}.data caption{caption-side:bottom;text-align:left;margin-top:12px;font-size:14px;line-height:1.6;color:var(--muted)}.data th,.data td{padding:11px 12px 11px 0;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.data thead th{font-size:14px;font-weight:500;color:var(--muted);border-bottom:1px solid var(--ink)}.data td.n,.data th.n{text-align:right;padding-right:0;padding-left:12px;white-space:nowrap}.data td.d{color:var(--accent-ink);font-weight:600}.data+p,.code+p{margin-top:24px}.code{margin:24px 0 0;border:1px solid var(--line);border-radius:var(--r-sm);background:var(--sunk);overflow:hidden}.code figcaption{display:flex;justify-content:space-between;gap:12px;margin:0;padding:9px 14px;border-bottom:1px solid var(--line);background:var(--paper);font:500 13px var(--mono);color:var(--muted)}.code pre{margin:0;padding:16px 18px;overflow-x:auto;font:13.5px/1.7 var(--mono);color:var(--ink-2);tab-size:2}.code .c{color:var(--muted)}.code .k{color:var(--accent-ink)}.recent{display:grid;grid-template-columns:120px minmax(0,1fr);gap:8px 40px;margin-top:clamp(36px,4vw,56px)}.recent h3{margin:0;font-size:20px;font-weight:650;letter-spacing:-.02em}.recent .log{margin-top:0}/* resume */
 .resume-page{padding:clamp(40px,6vw,88px) 0 clamp(48px,6vw,96px)}
 .resume-intro{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(24px,6vw,96px);align-items:end;padding-bottom:32px}
 .resume-intro h1{font-size:clamp(52px,7vw,92px);font-weight:700;line-height:1;letter-spacing:-.04em}
 .resume-intro .hero-role{margin:16px 0 0}
 .resume-intro p{max-width:34em}
 .resume-tools{margin-top:24px}
+.resume-photo{display:none} /* 증명사진은 이력서 PDF(인쇄)에만 */
 .resume-facts{display:flex;flex-wrap:wrap;gap:16px 56px;margin:0;padding:22px 0;border-top:1px solid var(--ink);border-bottom:1px solid var(--line)}
 .resume-facts dt{font-size:14px;color:var(--muted)}
 .resume-facts dd{margin:2px 0 0;font-weight:550}
 .resume-facts a{text-decoration:none}
-.resume-row{display:grid;grid-template-columns:140px minmax(0,1fr);gap:clamp(20px,4vw,64px);padding:clamp(32px,4vw,52px) 0;border-bottom:1px solid var(--line)}
+.resume-row{display:grid;grid-template-columns:140px minmax(0,1fr);gap:clamp(20px,4vw,64px);padding:clamp(28px,3vw,40px) 0;border-bottom:1px solid var(--line)}
 .resume-row h2{font-size:20px;font-weight:650}
 .resume-entry{display:grid;grid-template-columns:140px minmax(0,1fr);gap:20px}
 .resume-entry+.resume-entry{margin-top:28px;padding-top:28px;border-top:1px solid var(--line)}
@@ -190,14 +191,14 @@ code{font-family:var(--mono);font-size:.84em;padding:2px 6px;background:var(--su
 .pdf-status{padding:40px 0;color:var(--muted)}
 
 /* 404 */
-.not-found{padding:clamp(80px,12vw,168px) 0}
+.not-found{padding:clamp(64px,9vw,128px) 0}
 .not-found h1{font-size:clamp(40px,6vw,72px);font-weight:700;letter-spacing:-.04em;margin-bottom:20px}
 .not-found p{color:var(--muted);margin-bottom:32px}
 
 /* footer: 연락이 페이지의 마지막 한마디 */
-.footer{padding:clamp(64px,9vw,128px) 0 28px;border-top:1px solid var(--line)}
+.footer{padding:clamp(48px,6vw,88px) 0 28px;border-top:1px solid var(--line)}
 .footer-lead{font-size:clamp(28px,3.6vw,48px);font-weight:650;line-height:1.2;letter-spacing:-.035em;margin-bottom:28px;max-width:16em}
-.footer-links{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:clamp(48px,7vw,96px)}
+.footer-links{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:clamp(36px,5vw,64px)}
 .footer-links a{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border:1px solid var(--line-2);border-radius:var(--r-sm);font-weight:550;text-decoration:none;transition:background-color .16s ease,border-color .16s ease,color .16s ease,transform .16s var(--ease-out)}
 .footer-links a:first-child{background:var(--ink);border-color:var(--ink);color:var(--paper)}
 .footer-links a:active{transform:scale(.97)}
@@ -218,56 +219,90 @@ code{font-family:var(--mono);font-size:.84em;padding:2px 6px;background:var(--su
   .work-thumb,.media-frame img,.video-link img{transition:none!important;transform:none!important}
 }
 
+
+/* 인쇄/PDF: 글자는 본문 9.5pt 기준, 가장 큰 제목도 17pt. 화면용 큰 제목·숫자는 쓰지 않음 */
 @media print{
+@page{size:A4;margin:14mm 14mm 15mm}
 :root{--paper:var(--white);--sheet:var(--white)}
-body{font-size:10pt;line-height:1.6;background:var(--white);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{font-size:9.5pt;line-height:1.6;background:var(--white);-webkit-print-color-adjust:exact;print-color-adjust:exact}
 *,*::before,*::after{animation:none!important;transition:none!important}
 .site-header,.footer,.skip,.no-print,.hero-actions,.back,.menu-toggle,.pdf-toolbar,.video-fallback{display:none!important}
 .shell,.project-cover{width:auto}
 a,.arrow-link{text-decoration:none;color:inherit}
 .arrow-link::after{display:none}
-.body a[href^="http"]::after,.resume-facts a[href^="http"]::after,.case-end a::after{content:" " attr(href);font-size:8pt;font-weight:400;color:var(--muted);word-break:break-all}
-.resume-facts a[href^="http"]::after{content:none}
+.body a[href^="http"]::after,.case-end a::after{display:inline;width:auto;height:auto;border:0;transform:none;content:" " attr(href);font-size:7.5pt;font-weight:400;color:var(--muted);word-break:break-all}
+.case-end{gap:2mm 8mm;margin-top:3mm}
+h1,h2,h3{letter-spacing:-.015em;line-height:1.3}
 h2,h3{break-after:avoid}
-figure,.flow,.numbered article,.media-pair,.resume-entry,.skills div,.career-list li,.case-list li{break-inside:avoid}.log li,.data tr,.code,.diagram,.facts-row{break-inside:avoid}.code pre{white-space:pre-wrap;font-size:8pt}.diagram{background:none}.recent{display:none}
-img{max-height:88mm;width:auto!important;max-width:100%}
-.media-phones img,.media-phone-single img{max-height:70mm}
+p{orphans:3;widows:3}
+figure,.flow,.numbered article,.media-pair,.resume-entry,.skills div,.career-list li,.case-list li,.log li,.data tr,.code,.diagram{break-inside:avoid}
+.code pre{white-space:pre-wrap;font-size:7.5pt;padding:3mm 4mm}
+.code figcaption{font-size:7.5pt;padding:1.5mm 4mm}
+.diagram{background:none}
+.recent{display:none}
+img{max-height:62mm;width:auto!important;max-width:100%}
+.media-phones img,.media-phone-single img{max-height:52mm}
+.media-pair img{max-height:48mm}
+.print-skip{display:none!important}
 .media-pair{display:flex;gap:4mm}
-.case-section{padding:6mm 0}
-.case-grid{grid-template-columns:1fr;gap:3mm}
-.case-grid h2{position:static;font-size:15pt}
+.media-frame{margin-top:3mm}
+figcaption,.caption,.data caption{margin-top:1.5mm;font-size:7.5pt}
+.case-section{margin:0;padding:4mm 0;border-top:1px solid var(--line)}
+main>.case-section:last-child{margin-bottom:0}
+.case-grid{display:block}
+.case-grid>div:first-child{break-after:avoid;margin-bottom:2.5mm}
+.case-grid h2{position:static;font-size:12pt}
 .body{max-width:none}
-.body h3{margin-top:5mm;font-size:11.5pt}
-.page-hero{padding:0 0 5mm;display:block}
-.page-hero h1,.pdf-cover h1{font-size:30pt}
-.lead{font-size:11.5pt}
-.project-cover{padding:0;border-radius:0;background:none}
-.project-cover img{border-radius:0;max-height:80mm}
-.inspector{display:flex;flex-wrap:wrap;gap:1mm 8mm;margin-top:4mm;padding:0;border:0}
-.inspector div{display:block;padding:0;border:0!important}
-.inspector dd{font-size:9.5pt}
-.case-section{margin:0;border-top:1px solid var(--line)}
-.resume-row{margin:0;border-top:1px solid var(--line);border-bottom:0}
-.resume-facts{padding:4mm 0;gap:2mm 10mm}
+.body h3,.numbered h3{margin-top:4mm;font-size:10pt}
+.body>h3:first-child{margin-top:0}
+.numbered{margin:3mm 0}
 .numbered article{padding:2mm 0}
-.flow span{border:1px solid var(--line)}
+.flow{margin:3mm 0;gap:1mm 2mm}
+.flow span{padding:.5mm 2mm;font-size:8pt;border:1px solid var(--line)}
+.data{margin-top:3mm;font-size:8.5pt}
+.data th,.data td{padding:1.4mm 3mm 1.4mm 0}
+.data thead th{font-size:8pt}
+.log{margin-top:3mm}
+.log li{grid-template-columns:16mm minmax(0,1fr);gap:.5mm 4mm;padding:2mm 0}
+.log time,.log p{font-size:8.5pt}
+.log b{font-size:9.5pt}
+.log-more{font-size:8.5pt}
+.page-hero{display:block;padding:0 0 4mm}
+.page-hero h1,.pdf-cover h1,.resume-intro h1{font-size:17pt;font-weight:700}
+.lead,.hero-role{font-size:10.5pt;margin-top:2mm}
+.project-cover{margin:0 0 2mm;padding:0;border-radius:0;background:none}
+.project-cover img{border-radius:0;max-height:70mm}
+.inspector{display:flex;flex-wrap:wrap;gap:1mm 8mm;margin-top:3mm;padding:0;border:0}
+.inspector div{display:block;padding:0;border:0!important}
+.inspector dt{font-size:8pt}
+.inspector dd{font-size:9pt}
 .video-link{display:block;color:var(--ink);background:none}
-.video-link img{display:none}
-.video-link::after{content:"시연 영상: " attr(href);font-size:9pt;color:var(--muted)}
-.video-link span{display:none}
-.pdf-cover{padding:20mm 0 0;min-height:240mm}
-.pdf-project{break-before:page;border-top:0;margin-top:0}
+.video-link img,.video-link span{display:none}
+.body .video-link::after{content:"시연 영상: " attr(href);font-size:8.5pt;color:var(--muted)}
+.pdf-cover{padding:0}
+.pdf-cover .resume-facts{margin-top:6mm}
+.pdf-contents{margin-top:6mm}
+.pdf-project{break-before:auto;margin-top:7mm;padding-top:5mm;border-top:1px solid var(--ink)}
+.pdf-project .page-hero,.pdf-project .project-cover{break-inside:avoid;break-after:avoid}
+.pdf-project>.case-section:first-of-type{border-top:0}
 .resume-page{padding:0}
-.resume-intro{grid-template-columns:1fr 1.6fr;padding-bottom:5mm}
-.resume-intro h1{font-size:30pt}
-.resume-intro .hero-role{font-size:12pt;margin-top:2mm}
-.resume-row{grid-template-columns:26mm 1fr;gap:6mm;padding:5mm 0}
-.resume-row h2{font-size:12pt}
-.resume-entry{grid-template-columns:30mm 1fr;gap:4mm}
-.resume-entry+.resume-entry{margin-top:4mm;padding-top:4mm}
-.resume-entry h3{font-size:11.5pt}
-.resume-entry .date,.resume-entry .role{font-size:9pt}
-.resume-entry li{margin:1mm 0}
-.skills div{grid-template-columns:30mm 1fr;gap:4mm;padding:1.5mm 0}
+.resume-page .resume-intro{grid-template-columns:minmax(0,1fr) 25mm;grid-template-rows:auto 1fr;gap:3mm 8mm;align-items:start;padding-bottom:4mm}
+.resume-intro>div:first-child{grid-column:1;grid-row:1}
+.resume-intro>div:nth-child(2){grid-column:1;grid-row:2}
+.resume-intro p{max-width:none}
+.resume-intro .hero-role{font-size:10.5pt;margin-top:1mm}
+.resume-photo{display:block;grid-column:2;grid-row:1/span 2;justify-self:end;height:32mm;border-radius:0}
+.resume-facts{padding:3mm 0;gap:2mm 10mm}
+.resume-facts dt{font-size:8pt}
+.resume-row{grid-template-columns:24mm 1fr;gap:6mm;margin:0;padding:4.5mm 0;border-top:1px solid var(--line);border-bottom:0}
+.resume-row h2{font-size:11pt}
+.resume-entry{grid-template-columns:28mm 1fr;gap:4mm}
+.resume-entry+.resume-entry{margin-top:3.5mm;padding-top:3.5mm}
+.resume-entry h3{font-size:10.5pt}
+.resume-entry .date,.resume-entry .role{font-size:8.5pt}
+.resume-entry ul{margin-top:2mm}
+.resume-entry li{margin:.8mm 0}
+.resume-entry p:not(.role){margin-top:2mm}
+.skills div{grid-template-columns:28mm 1fr;gap:4mm;padding:1.4mm 0}
 .rise{animation:none!important}
 }

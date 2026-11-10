@@ -20,7 +20,7 @@ web
 
 ## Operating Context
 - 지원서·이력서에 링크로 첨부. 방문자는 첫 화면과 프로젝트 목록에서 몇십 초 안에 판단한다.
-- 사이트에서 이력서 PDF, 프로젝트 3개를 합친 포트폴리오 PDF를 저장할 수 있다(`portfolio-pdf.html`, 인쇄 스타일).
+- 사이트에서 이력서 PDF, 프로젝트 4개를 합친 포트폴리오 PDF를 저장할 수 있다(`portfolio-pdf.html`, 인쇄 스타일).
 - Cloudflare Workers 정적 에셋으로 배포 (https://portfolio.shjj.workers.dev/).
 
 ## Capabilities and Constraints
