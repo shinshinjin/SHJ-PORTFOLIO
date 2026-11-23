@@ -25,7 +25,7 @@
 ## 반드시 지킬 규칙
 - 내부 링크·리소스 경로는 항상 `/`로 시작하는 루트 절대경로(`/assets/...`, `/projects/...`)로 쓴다.
   이유: 프로젝트 상세·이력서 등 하위 폴더 페이지에서 상대경로가 깨짐.
-- `css/*.css`를 수정하면 모든 HTML(8개)의 `?v=` 숫자를 1 올린다. (현재 style.css?v=15, responsive.css?v=10)
+- `css/*.css`를 수정하면 모든 HTML(8개)의 `?v=` 숫자를 1 올린다. (현재 style.css?v=16, responsive.css?v=10)
   이유: 브라우저 캐시 때문에 변경이 반영되지 않음.
 - 헤더(`.site-header`)·네비·푸터(`.footer`)는 모든 페이지에 복사되어 있다.
   하나를 고치면 index, 404, resume, portfolio-pdf, projects/* 전부 동일하게 고친다.
